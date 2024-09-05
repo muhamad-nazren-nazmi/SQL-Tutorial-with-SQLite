@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "eAY7sOF6vEtCEriFhW87C",
+            "query": "/*\nPractice Problem 1\n\nGet the unique (distinct) job locations in the job_postings_fact table.\nOrder in alphabetical order (ascending order).\n*/\n\nSELECT DISTINCT\n    job_location\nFROM \n\tjob_postings_fact\nORDER BY\n\tjob_location\n\n\n",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    },
+                    "autosize": true
+                },
+                "frames": []
+            },
+            "name": "Practice Problem 1",
+            "createdAt": "2024-05-23T10:29:49.898Z"
+        }
+    ]
+}

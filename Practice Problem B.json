@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "roGMX5XPajKj6meI6_yP5",
+            "query": "/*\nProblem \n\nLook for non-senior data analyst or business analyst roles\n- only get job titles that include either 'Data' or 'Business'\n- also include those with analyst in any part of the title\n- don't include any job titles with 'Senior' followed by any character\nGet the job title, location, and average yearly salary\n*/\n\nSELECT\n\tjob_title,\n\tjob_location AS location,\n\tsalary_year_avg AS salary\nFROM\n\tjob_postings_fact\nWHERE\n\t(job_title LIKE '%Data%' OR job_title LIKE '%Business%') \n\tAND job_title LIKE '%Analyst%' \n\tAND job_title NOT LIKE '%Senior%'\n\t",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    },
+                    "autosize": true
+                },
+                "frames": []
+            },
+            "name": "Practice Problem B",
+            "createdAt": "2024-05-26T15:14:36.107Z"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "Xp2CC2ifEC1FIZ2A5SMAl",
+            "query": "/*\nCalculate the current month's total earnings per project.\nCalculate a scenario where the hourly rate increases by 5.\nWhy?\n- see the difference if we raised the hourly rate\n- figure out what is a reasonable price\n*/\n\nSELECT\n\tproject_id,\n\tSUM(hours_spent * hours_rate) AS project_original_cost,\n\tSUM(hours_spent * (hours_rate + 5)) AS project_expected_cost,\n\tSUM(hours_spent * (hours_rate + 5)) - SUM(hours_spent * hours_rate) AS difference_in_cost\nFROM\n\tinvoices_fact\nGROUP BY\n\tproject_id\nORDER BY\n\tdifference_in_cost\n",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    },
+                    "autosize": true
+                },
+                "frames": []
+            },
+            "name": "Aggregate Problem 2",
+            "createdAt": "2024-05-28T07:04:31.220Z"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "mambGPY0A4bQhaedD69HA",
+            "query": "/*\nRetrieve the list of job titles (job_title) and the corresponding company names (name)\nfor all job postings that mention 'Data Scientist' in the job title.\nUse the job_postings_fact and company_dim tables for this query\n*/\n\nSELECT\n\tjob_postings.company_id,\n\tjob_title,\n\tname\nFROM job_postings_fact AS job_postings\nLEFT JOIN company_dim AS company\nON job_postings.company_id = company.company_id\nWHERE job_title LIKE '%Data Scientist%'",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    },
+                    "autosize": true
+                },
+                "frames": []
+            },
+            "name": "Join Problem 1",
+            "createdAt": "2024-05-28T09:57:44.586Z"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "uazEPId1T11RcbMFgapDx",
+            "query": "/*\nPractice Problem 2\n\nIn the job_postings_fact table get the columns job_id, job_title_short, job_location and job_via columns\nand order it in ascending order by job_location\n*/\nSELECT\n\tjob_id,\n    job_title_short,\n    job_location,\n\tjob_via\nFROM \n\tjob_postings_fact\nORDER BY \n\tjob_location\n",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    },
+                    "autosize": true
+                },
+                "frames": []
+            },
+            "name": "Practice Problem 2",
+            "createdAt": "2024-05-23T10:33:32.497Z"
+        }
+    ]
+}

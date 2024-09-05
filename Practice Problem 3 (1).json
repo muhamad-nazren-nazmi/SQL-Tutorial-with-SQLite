@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "I5oCT2hnXxuoLhBNxeuBZ",
+            "query": "/*\nPractice Problem 3\n\nIn the job_postings_fact table get the columns job_id, job_title_short, job_location, job_via and salary_year_avg columns.\nAnd only look at rows where job_title_short is 'Data Engineer'\n*/\n\nSELECT\n\tjob_id,\n    job_title_short,\n\tjob_location,\n\tjob_via,\n\tsalary_year_avg\nFROM\n\tjob_postings_fact\nWHERE\n\tjob_title_short = 'Data Engineer'",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    },
+                    "autosize": true
+                },
+                "frames": []
+            },
+            "name": "Practice Problem 3",
+            "createdAt": "2024-05-23T10:39:51.533Z"
+        }
+    ]
+}

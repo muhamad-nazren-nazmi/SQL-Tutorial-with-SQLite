@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "BxWMTV2JB7Kvl_snjdrk3",
+            "query": "SELECT\n\tjob_title_short,\n\tjob_location,\n\tjob_via,\n\tsalary_year_avg\nFROM\n\tjob_postings_fact\nWHERE\n    (\n\t    (job_title_short = 'Data Analyst' AND salary_year_avg > 100000) OR \n    \t(job_title_short = 'Business Analyst' AND salary_year_avg > 70000)\n    )\n    AND job_location IN ('Boston, MA', 'Anywhere')",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    },
+                    "autosize": true
+                },
+                "frames": []
+            },
+            "name": "Practice Problem A",
+            "createdAt": "2024-05-24T09:17:54.396Z"
+        }
+    ]
+}

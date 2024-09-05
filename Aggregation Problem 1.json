@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "OnmCnVkUXXViLOA_jQwRc",
+            "query": "/*\nPractice Problem 1\n\nIn the job_postings_fact table calculate the total sum of the average yearly salary (salary_year_avg) for all job postings\nthat are marked as fully remote (job_work_from_home = TRUE) and divide it by the total count of salary_year_avg.\nEnsure to only include job postings where a yearly salary is specified (i.e., salary_year_avg is not NULL)\n*/ \n\nSELECT\n\tjob_title_short,\n\tSUM(salary_year_avg) AS salary_total,\n\tCOUNT(salary_year_avg) AS salary_count,\n\tSUM(salary_year_avg) / COUNT(salary_year_avg) AS salary_mean\nFROM\n\tjob_postings_fact\nWHERE\n\tsalary_year_avg <> 'NULL' AND job_work_from_home = TRUE\nGROUP BY\n\tjob_title_short\nORDER BY\n\tsalary_mean\n\n\t",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    },
+                    "autosize": true
+                },
+                "frames": []
+            },
+            "name": "Aggregation Problem 1",
+            "createdAt": "2024-05-27T11:00:36.378Z"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "inquiries": [
+        {
+            "id": "FxHFfvtwdiwveB5HNTsVM",
+            "query": "/*\nOrder of Execution\n1. FROM/JOIN\n2. WHERE\n3. GROUP BY\n4. HAVING\n5. SELECT\n6. DISTINCT\n7. ORDER BY\n8. LIMIT/OFFSET\n\nProblem\n\nFind the average salary and number of job postings for each skill for this:\nHint: Use LEFT JOIN to combine skills_dim, skills_job_dim and job_postings_fact tables\nWhy? Understand the demand and pay for skills\n*/\n\nSELECT \n\tskills_dim.skills,\n\tCOUNT(job_postings.job_id) AS job_count,\n\tAVG(salary_year_avg) AS salary_avg\nFROM \n\tskills_job_dim AS skills_job\nLEFT JOIN \n\tjob_postings_fact AS job_postings\n\tON job_postings.job_id = skills_job.job_id\nLEFT JOIN\n\tskills_dim\n\tON skills_job.skill_id = skills_dim.skill_id\nGROUP BY\n\tskills_dim.skills\nORDER BY\n\tskills_dim.skills",
+            "viewType": "chart",
+            "viewOptions": {
+                "data": [],
+                "layout": {
+                    "xaxis": {
+                        "range": [
+                            -1,
+                            6
+                        ],
+                        "autorange": true
+                    },
+                    "yaxis": {
+                        "range": [
+                            -1,
+                            4
+                        ],
+                        "autorange": true
+                    },
+                    "autosize": true
+                },
+                "frames": []
+            },
+            "name": "Basic SQL Summary Practice",
+            "createdAt": "2024-05-29T07:32:39.876Z"
+        }
+    ]
+}
